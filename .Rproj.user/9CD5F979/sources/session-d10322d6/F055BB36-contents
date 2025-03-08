@@ -32,6 +32,10 @@ adf.test(AirPassengers)
 # El p-value es menor que 0.05, así que podemos rechazar la hipótesis nula y concluir
 # que la serie temporal es estacionaria
 
+# En caso de que no fuese estacionaria:
+diff_series <- diff(AirPassengers)
+plot(diff_series, main = "Serie Diferenciada")
+
 # 5. Detección de valores atípicos
 boxplot(AirPassengers)
 # No hay valores atípicos
